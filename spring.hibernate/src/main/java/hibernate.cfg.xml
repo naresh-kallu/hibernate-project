@@ -1,0 +1,27 @@
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect
+		</property>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">postgres</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres?currentSchema=public
+		</property>
+
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<mapping
+			class="com.tectoro.spring.hibernate.sample.entity.Details" />
+		<mapping
+			class="com.tectoro.spring.hibernate.sample.entity.Person" />
+			<mapping
+			class="com.tectoro.spring.hibernate.sample.entity.Vendor" />
+			<mapping
+			class="com.tectoro.spring.hibernate.sample.entity.Products" />
+
+
+	</session-factory>
+
+</hibernate-configuration>
+
